@@ -1,24 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
+import AllMessages from './AllMessages';
 import './App.css';
+import Header from './Header';
+import InputForm from "./InputForm"
 
 function App() {
+  const urlToFetch = "https://cyf-matildaako-chat-server.netlify.app";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <InputForm urlToFetch={urlToFetch} />
+      <AllMessages urlToFetch={urlToFetch} />
+      
     </div>
   );
 }
